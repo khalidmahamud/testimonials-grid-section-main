@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: https://khalidmahamud.github.io//
+- Live Site URL: https://khalidmahamud.github.io/testimonials-grid-section-main/
 
 
 ### Built with
