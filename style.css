@@ -1,0 +1,162 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--light-grayish-blue);
+}
+
+.cards {
+    margin: 20px;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+#daniel {
+    background-color: var(--moderate-violet);
+    color: var(--white);
+}
+
+#jonathan {
+    background-color: var(--dark-grayish-blue);
+    color: var(--white);
+}
+
+#jeanette {
+    background-color: var(--white);
+    color: var(--dark-grayish-blue);
+}
+
+#patrick {
+    background-color: var(--dark-blackish-blue);
+    color: var(--white);
+}
+
+#kira {
+    background-color: var(--white);
+    color: var(--dark-grayish-blue);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    margin-bottom: 15px;
+}
+
+.name {
+    margin-bottom: 2px
+}
+
+.verified-text {
+    font-size: .8rem;
+    opacity: 0.5;
+}
+
+.header-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin-right: 10px;
+}
+
+.outside-quotation {
+    line-height: 1.4rem;
+}
+
+.inside-quotation {
+    margin-top: 10px;
+    opacity: 0.7;
+    line-height: 1.2rem;
+}
+
+#daniel {
+    position: relative;
+    z-index: -2;
+}
+
+.quote {
+    position: absolute;
+    right: 10%;
+    top: 0;
+    z-index: -1;
+}
+
+@media screen and (min-width: 576px) { 
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        overflow-y: auto;
+    }
+    .cards {
+        margin: 0;
+    }
+
+    .main-container {
+        display: flex;
+        padding: 20px ;
+        max-width: 1000px;
+        justify-content: space-between;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 72.5%;
+    }
+
+    
+    .right {
+        flex-basis: 25%;
+    }
+
+    .left-top, .left-bottom {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: space-between;
+    }
+
+    .left-top {
+        margin-bottom: 8px;
+    }
+
+    .left-bottom {
+        margin-top: 8px
+    }
+
+    #daniel, #patrick {
+        flex-basis: 68%;
+    }
+
+    #jonathan, #jeanette {
+        flex-basis: 29%;
+    }
+
+    #kira {
+        height: 100%;
+    }
+
+    .inside-quotation {
+        font-size: .9rem;
+    }
+}
